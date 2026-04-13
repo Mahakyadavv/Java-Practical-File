@@ -15,6 +15,7 @@ class ScientificCalculator extends JFrame implements ActionListener {
         tan = new JButton("tan");
         log = new JButton("log");
         sqrt = new JButton("sqrt");
+    
 
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(2, 3));
