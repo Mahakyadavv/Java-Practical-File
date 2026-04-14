@@ -1,7 +1,7 @@
 import java.awt.*;
 
-class AWTLayoutsDemo extends Frame {
-    AWTLayoutsDemo() {
+class LayoutDemo extends Frame {
+    LayoutDemo() {
         setLayout(new GridLayout(2, 2));
 
         add(new Button("Button 1"));
@@ -14,6 +14,6 @@ class AWTLayoutsDemo extends Frame {
     }
 
     public static void main(String[] args) {
-        new AWTLayoutsDemo();
+        new LayoutDemo();
     }
 }
