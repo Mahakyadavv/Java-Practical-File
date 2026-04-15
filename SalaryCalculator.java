@@ -6,8 +6,6 @@ public class SalaryCalculator {
         }
 
         double basic;
-        char grade;
-
         try {
             basic = Double.parseDouble(args[0]);
         } catch (NumberFormatException e) {
@@ -20,7 +18,17 @@ public class SalaryCalculator {
             return;
         }
 
-        grade = Character.toUpperCase(args[1].charAt(0));
+        if (args[1] == null || args[1].trim().isEmpty()) {
+            System.out.println("Invalid grade. Enter A, B, or C.");
+            return;
+        }
+
+        char grade = Character.toUpperCase(args[1].trim().charAt(0));
+
+        if (grade != 'A' && grade != 'B' && grade != 'C') {
+            System.out.println("Invalid grade. Enter A, B, or C.");
+            return;
+        }
 
         double hra = 0.20 * basic;
         double da = 0.10 * basic;
@@ -37,7 +45,7 @@ public class SalaryCalculator {
                 allowance = 1300;
                 break;
             default:
-                allowance = 1000;
+                allowance = 0; // unreachable due to validation above
         }
 
         double totalSalary = basic + hra + da + allowance;
