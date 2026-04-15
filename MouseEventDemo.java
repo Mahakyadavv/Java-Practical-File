@@ -11,7 +11,7 @@ class MouseEventDemo extends Frame implements MouseListener {
         add(label);
         addMouseListener(this);
 
-        setSize(400, 400);
+        setSize(200, 200);
         setLayout(null);
         setVisible(true);
     }
